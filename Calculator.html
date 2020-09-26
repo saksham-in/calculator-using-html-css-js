@@ -1,0 +1,141 @@
+
+<html>
+    <head>
+        <style>
+            span{
+                width: 40px;
+                
+            }
+            input{
+                width:161.2px;
+                background-color: rgb(245,255,250);
+                text-align: right;
+            }
+        
+            .i7,.i8,.i9,.i4,.i5,.i6,.i3,.i2,.i1,.i0,idot{
+                color:blue;
+            }
+             .o,.s,.a,.m,.clr,.mo,.d{
+                color:red;
+            }
+            
+            .container{
+                border-style:solid;
+                width:160px;
+                height:120px;
+            }
+            
+             .container1{
+                display:grid;
+                grid-template-columns: 40px 40px 40px 40px;
+     
+                 
+            }
+            .o{
+                width:80px;
+            }
+            
+            .container1 span{
+               border-style: solid;
+               border-color: black;
+               border-width:1px;
+               text-align: center;
+               
+            }
+       container1 span input{
+               border-style: solid;
+               border-color: black;
+               border-width:1px;
+               text-align: center;
+               width:40px;
+               
+            }
+            .container2{
+                display:grid;
+                 grid-template-columns: 40px 40px 40px 40px;
+            }
+            
+            .container2 span{
+               border-style: solid;
+               border-color: black;
+               border-width:1px;
+               text-align: center;
+            }
+            
+            span{
+                background-color: rgb(245,245,245);
+            }
+           
+            
+            .bac{
+                background-color: pink;
+                
+            }
+            
+            .o{
+                background-color: rgb(240,248,255);
+            }
+            
+            
+            
+        </style>
+ <script>
+function back() {
+   var str=document.calc.dis.value;
+  
+     document.calc.dis.value = str.substring(0, str.length-1);
+     
+  
+} 
+</script> 
+     
+    </head>
+    <body>
+        
+        <div class="container">
+            <form name="calc">
+                <input type="text" name="dis" >
+                
+         
+                <br>
+                <div class="container1">
+                 <span class="mo" onclick="document.calc.dis.value+='%'">  mod </span>  
+                 <span class="d" onclick="document.calc.dis.value+='/'">  /  </span>           
+                 <span class="clr" onclick="document.calc.dis.value=''"> C </span>
+                  <span  class="bac"  onclick="back()"> X</span>
+                
+                 
+              
+                </div>
+                
+                 <div class="container2">
+          
+                 <span class="i7" onclick="document.calc.dis.value+='7'">  7 </span>
+                 <span class="i8" onclick="document.calc.dis.value+='8'">  8  </span> 
+                 <span class="i9" onclick="document.calc.dis.value+='9'"> 9  </span>
+                 <span class="m" onclick="document.calc.dis.value+='*'">  *  </span>
+                 
+            
+                 <span class="i4" onclick="document.calc.dis.value+='4'">  4  </span>  
+                 <span class="i5" onclick="document.calc.dis.value+='5'">  5  </span> 
+                 <span class="i6" onclick="document.calc.dis.value+='6'"> 6  </span> 
+                 <span class="a" onclick="document.calc.dis.value+='+'">  +  </span>
+               
+            
+                 <span class="i1" onclick="document.calc.dis.value+='1'">  1 </span>
+                 <span class="i2" onclick="document.calc.dis.value+='2'">  2  </span> 
+                 <span class="i3" onclick="document.calc.dis.value+='3'">  3  </span>
+                 <span class="s" onclick="document.calc.dis.value+='-'">  -  </span>
+                
+           
+                  <span class="i0" onclick="document.calc.dis.value+='0'">  0  </span>
+                  <span class="idot" onclick="document.calc.dis.value+='.'"> .  </span> 
+                  <span class="o" onclick="document.calc.dis.value=eval(document.calc.dis.value)">  =  </span>
+                 
+                  </div>
+               </form>
+           
+</div>
+        
+    </body>
+</html>
